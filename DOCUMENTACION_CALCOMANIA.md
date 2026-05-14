@@ -275,7 +275,7 @@ def revisar():
 ```python
 {
     "titulo": "Imprime calcomanía",
-    "texto": "Descarga el distintivo en PDF para portarlo en tu vehiculo.",
+    "texto": "Descarga el distintivo en PDF para portarlo en tu vehículo.",
     "items": [
         "Revisa que la placa sea correcta.",
         "Imprime o guarda el PDF."

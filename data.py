@@ -42,7 +42,7 @@ TRAMITES = {
         "portal": "SAT",
         "icono": "CAR",
         "descripcion": "Pago del Impuesto Sobre Circulación de Vehículos.",
-        "requisitos": ["Placa del vehiculo", "NIT del propietario"],
+        "requisitos": ["Placa del vehículo", "NIT del propietario"],
         "pasos": [
             {
                 "titulo": "Revisa datos del vehículo",
@@ -62,7 +62,7 @@ TRAMITES = {
             },
             {
                 "titulo": "Imprime calcomanía",
-                "texto": "Descarga el distintivo en PDF para portarlo en tu vehiculo.",
+                "texto": "Descarga el distintivo en PDF para portarlo en tu vehículo.",
                 "items": ["Revisa que la placa sea correcta.", "Imprime o guarda el PDF."],
                 "enlace": "https://portal.sat.gob.gt/portal/impresion-calcomania/",
             },
@@ -155,12 +155,12 @@ MENU = [
     {
         "id": "sat",
         "titulo": "Portal SAT",
-        "subtitulo": "Vehiculos y NIT",
+        "subtitulo": "Vehículos y NIT",
         "icono": "SAT",
         "hijos": [
             {
                 "id": "vehiculos",
-                "titulo": "Vehiculos",
+                "titulo": "Vehículos",
                 "subtitulo": "Calcomanía y placas",
                 "icono": "CAR",
                 "hijos": [{"tramite": "calcomania"}],
