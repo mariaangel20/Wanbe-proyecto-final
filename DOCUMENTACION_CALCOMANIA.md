@@ -132,8 +132,8 @@ def revisar():
 
 ```python
 {
-    "titulo": "Revisa datos del vehiculo",
-    "texto": "Antes de iniciar, ten claros los datos que la SAT pedira para generar el formulario.",
+    "titulo": "Revisa datos del vehículo",
+    "texto": "Antes de iniciar, ten claros los datos que la SAT pedirá para generar el formulario.",
     "items": [
         "Confirma la placa.",
         "Confirma el NIT del propietario.",
