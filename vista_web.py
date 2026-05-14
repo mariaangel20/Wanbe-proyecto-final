@@ -623,7 +623,7 @@ class WanbeHandler(BaseHTTPRequestHandler):
 
         # Ruta de tramite: /tramite/calcomania?paso=2
         if path.startswith("/tramite/"):
-            # Extraer numero del paso (?paso=1, ?paso=2, etc)
+          # Extraer número del paso (?paso=1, ?paso=2, etc)
             tramite_id = path.removeprefix("/tramite/")
             
             # Verificar si se solicita el resumen final

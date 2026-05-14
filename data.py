@@ -57,8 +57,8 @@ TRAMITES = {
             },
             {
                 "titulo": "Paga en banco",
-                "texto": "Usa el numero de formulario y numero de acceso.",
-                "items": ["Verifica el monto.", "Paga en linea o ventanilla.", "Guarda recibo."],
+                "texto": "Usa el número de formulario y número de acceso.",
+                "items": ["Verifica el monto.", "Paga en línea o ventanilla.", "Guarda recibo."],
             },
             {
                 "titulo": "Imprime calcomanía",
