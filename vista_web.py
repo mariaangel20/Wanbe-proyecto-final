@@ -388,7 +388,7 @@ def render_tramite_resumen(tramite_id: str) -> str:
 </section>
 """
 
-    # Proximos pasos
+    # Próximos pasos
     if tramite.get("proximos_pasos"):
         proximos = "<br>".join(f"→ {escape(paso)}" for paso in tramite["proximos_pasos"])
         contenido_html += f"""
@@ -398,7 +398,7 @@ def render_tramite_resumen(tramite_id: str) -> str:
 </article>
 """
 
-    # Renovacion
+    # Renovación
     if tramite.get("renovacion"):
         renovacion = tramite["renovacion"]
         renovacion_html = ""
@@ -466,21 +466,16 @@ def render_tramite(tramite_id: str, paso_actual: int = 1) -> str:
     DIFERENCIA CON ESCRITORIO:
     - En escritorio: todos los pasos se cargan en memoria y cambias con botones
     - En web: cada paso es una URL diferente (?paso=N)
-    
+
     Muestra:
-    - Información del tramite (tiempo, costo, vigencia)
+    - Información del trámite (tiempo, costo, vigencia)
     - Barra de progreso con porcentaje
-<<<<<<< main
     - Título y descripción del paso
-    - Lista de ítems/instrucciones
-=======
-    - Titulo y descripcion del paso
     - Tiempo estimado y errores comunes del paso
-    - Lista de items/instrucciones
->>>>>>> main
+    - Lista de ítems/instrucciones
     - Enlace oficial si existe
     - Botones para ir al paso anterior/siguiente
-    - Al final: proximos pasos, renovacion, contacto y casos especiales
+    - Al final: próximos pasos, renovación, contacto y casos especiales
     """
     tramite = TRAMITES.get(tramite_id)
     if tramite is None:
