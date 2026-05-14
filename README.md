@@ -1,6 +1,6 @@
 # Wanbe proyecto final
 
-Aplicacion visual sencilla creada en Python con `tkinter`.
+Aplicación visual sencilla creada en Python con `tkinter`.
 
 La idea es conservar la base de la app Wanbe original, pero en una version mas simple:
 
@@ -26,7 +26,7 @@ El proyecto se centra solo en tres guías:
 
 ## Ejecutar
 
-Aplicacion de escritorio:
+Aplicación de escritorio:
 
 ```bash
 python3 proyecto.py

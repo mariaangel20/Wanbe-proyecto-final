@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Funciones utilitarias para Wanbe (busqueda, normalizacion, recursion)."""
+"""Funciones utilitarias para Wanbe (búsqueda, normalización, recursión)."""
 from __future__ import annotations
 
 import unicodedata

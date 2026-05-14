@@ -73,7 +73,7 @@ TRAMITES = {
         "portal": "SAT",
         "icono": "NIT",
         "descripcion": "Solicitud electrónica para obtener NIT por primera vez.",
-        "requisitos": ["DPI vigente", "Recibo de luz o agua", "Correo electronico"],
+        "requisitos": ["DPI vigente", "Recibo de luz o agua", "Correo electrónico"],
         "pasos": [
             {
                 "titulo": "Abre portal SAT",
