@@ -14,7 +14,8 @@ from pathlib import Path
 from urllib.parse import parse_qs, unquote, urlparse
 import sys
 
-from proyecto import COLORS, MENU, TRAMITES, buscar_recursivo, encontrar_categoria
+from data import COLORS, MENU, TRAMITES
+from utils import buscar_recursivo, encontrar_categoria
 
 # ========== CONFIGURACIÓN DEL SERVIDOR ==========
 # Este archivo convierte la lógica de proyecto.py en una interfaz web accesible desde el navegador
@@ -38,7 +39,7 @@ def crear_ruta(categoria_id: str) -> str:
 
 
 def crear_ruta_tramite(tramite_id: str) -> str:
-    """Crea una URL para abrir un tramite.
+    """Crea una URL para abrir un trámite.
     
     Ejemplo: crear_ruta_tramite('calcomania') -> '/tramite/calcomania'
     """
@@ -301,13 +302,13 @@ def render_inicio(query: str = "") -> str:
   <h1>¿En qué trámite te guiamos hoy?</h1>
 </section>
 <form action="/" method="get">
-  <input name="q" value="{escape(query)}" placeholder="Buscar tramite...">
+  <input name="q" value="{escape(query)}" placeholder="Buscar trámite...">
   <button type="submit">Buscar</button>
 </form>
 {contexto_busqueda}
 <section class="section-title">
   <h2>Guías disponibles</h2>
-  <p>Selecciona el tramite que deseas revisar.</p>
+  <p>Selecciona el trámite que deseas revisar.</p>
 </section>
 {tarjetas}
 """,
@@ -365,13 +366,13 @@ def obtener_categoria_por_portal(portal: str) -> str:
 
 
 def render_tramite_resumen(tramite_id: str) -> str:
-    """Muestra el resumen final con proximos pasos, renovacion, contacto y casos especiales.
+    """Muestra el resumen final con próximos pasos, renovación, contacto y casos especiales.
     
-    Esta pantalla se muestra despues de completar todos los pasos del tramite.
+    Esta pantalla se muestra después de completar todos los pasos del trámite.
     Incluye:
-    - Confirmacion de finalizacion
-    - Proximos pasos a seguir
-    - Informacion de renovacion
+    - Confirmación de finalización
+    - Próximos pasos a seguir
+    - Información de renovación
     - Datos de contacto SAT
     - Casos especiales
     """
@@ -387,7 +388,7 @@ def render_tramite_resumen(tramite_id: str) -> str:
 </section>
 """
 
-    # Proximos pasos
+    # Próximos pasos
     if tramite.get("proximos_pasos"):
         proximos = "<br>".join(f"→ {escape(paso)}" for paso in tramite["proximos_pasos"])
         contenido_html += f"""
@@ -397,7 +398,7 @@ def render_tramite_resumen(tramite_id: str) -> str:
 </article>
 """
 
-    # Renovacion
+    # Renovación
     if tramite.get("renovacion"):
         renovacion = tramite["renovacion"]
         renovacion_html = ""
@@ -465,21 +466,16 @@ def render_tramite(tramite_id: str, paso_actual: int = 1) -> str:
     DIFERENCIA CON ESCRITORIO:
     - En escritorio: todos los pasos se cargan en memoria y cambias con botones
     - En web: cada paso es una URL diferente (?paso=N)
-    
+
     Muestra:
-    - Información del tramite (tiempo, costo, vigencia)
+    - Información del trámite (tiempo, costo, vigencia)
     - Barra de progreso con porcentaje
-<<<<<<< main
     - Título y descripción del paso
-    - Lista de ítems/instrucciones
-=======
-    - Titulo y descripcion del paso
     - Tiempo estimado y errores comunes del paso
-    - Lista de items/instrucciones
->>>>>>> main
+    - Lista de ítems/instrucciones
     - Enlace oficial si existe
     - Botones para ir al paso anterior/siguiente
-    - Al final: proximos pasos, renovacion, contacto y casos especiales
+    - Al final: próximos pasos, renovación, contacto y casos especiales
     """
     tramite = TRAMITES.get(tramite_id)
     if tramite is None:
@@ -622,7 +618,7 @@ class WanbeHandler(BaseHTTPRequestHandler):
 
         # Ruta de tramite: /tramite/calcomania?paso=2
         if path.startswith("/tramite/"):
-            # Extraer numero del paso (?paso=1, ?paso=2, etc)
+          # Extraer número del paso (?paso=1, ?paso=2, etc)
             tramite_id = path.removeprefix("/tramite/")
             
             # Verificar si se solicita el resumen final
