@@ -1,5 +1,11 @@
 # Wanbe - Guía Interactiva de Trámites
 
+## Integrantes
+
+- Maria Elizabeth Angel Berganza - 20250177
+- Nataly Raquel Monroy Castillo - 20250329
+- Luis Felipe González Villagrán - 20240594
+
 **Wanbe** es una aplicación educativa creada en Python para guiar a los usuarios a través de trámites complejos del SAT (Sistema de Administración Tributaria) y RENAP (Registro Nacional de Personas). La aplicación proporciona información estructurada, requisitos y pasos detallados de forma interactiva.
 
 ## Características principales
