@@ -366,13 +366,13 @@ def obtener_categoria_por_portal(portal: str) -> str:
 
 
 def render_tramite_resumen(tramite_id: str) -> str:
-    """Muestra el resumen final con proximos pasos, renovacion, contacto y casos especiales.
+    """Muestra el resumen final con próximos pasos, renovación, contacto y casos especiales.
     
-    Esta pantalla se muestra despues de completar todos los pasos del tramite.
+    Esta pantalla se muestra después de completar todos los pasos del trámite.
     Incluye:
-    - Confirmacion de finalizacion
-    - Proximos pasos a seguir
-    - Informacion de renovacion
+    - Confirmación de finalización
+    - Próximos pasos a seguir
+    - Información de renovación
     - Datos de contacto SAT
     - Casos especiales
     """
