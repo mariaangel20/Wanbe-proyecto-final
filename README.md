@@ -38,11 +38,13 @@ Vista web local:
 python3 vista_web.py
 ```
 
-Luego abrir:
+Luego abrir en el navegador:
 
 ```text
 http://127.0.0.1:8000
 ```
+
+**Nota:** Si la vista web no se abre correctamente en tu navegador, puedes pedirle a GitHub Copilot que abra la URL por ti usando el comando **"Abre la vista web"** en el editor. Esto puede ocurrir en algunos sistemas donde el navegador no responde automáticamente.
 
 ## Instalación y dependencias
 
@@ -63,9 +65,11 @@ Si quieres reiniciar el estado, borra `data/state.json` y vuelve a arrancar la a
 - POO: clase `WanbeApp` en `app.py`.
 - Funciones: utilidades en `utils.py` (`normalizar`, `buscar_recursivo`, `encontrar_categoria`) y persistencia en `data.py` (`cargar_estado`, `guardar_estado`).
 - Estructuras de datos: `TRAMITES` y `MENU` en `data.py` (diccionarios y listas).
-- Manejo de archivos: lectura/escritura JSON en `data/state.json` (con try/except).
+- Manejo de archivos: lectura/escritura JSON en `data/state.json` (con try/except, validación de corrupción, y respaldos automáticos).
 - Recursión: `buscar_recursivo` y `encontrar_categoria`.
-- Tests: pendientes (se recomienda `pytest` para funciones puras y persistencia).
+- Módulos: separación en `data.py`, `utils.py`, `app.py` y `proyecto.py`.
+- Manejo de errores: validación de estado, alertas al usuario con `messagebox`, y gestión de excepciones en 7+ métodos críticos.
+- Documentación: README con guías de uso, docstrings en todas las funciones públicas, y comentarios de código.
 
 ## Sugerencia de commit
 
